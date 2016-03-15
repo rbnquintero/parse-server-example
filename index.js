@@ -11,10 +11,13 @@ if (!databaseUri) {
 }
 
 var api = new ParseServer({
-  databaseURI: databaseUri || 'mongodb://localhost:27017/dev',
+  databaseURI: databaseUri || 'mongodb://localhost:27017/instagram',
+  //databaseURI: 'mongodb://some:1234@ds015289.mlab.com:15289/mytestdatabase',
   cloud: process.env.CLOUD_CODE_MAIN || __dirname + '/cloud/main.js',
-  appId: process.env.APP_ID || 'myAppId',
-  masterKey: process.env.MASTER_KEY || '', //Add your master key here. Keep it secret!
+  appId: process.env.APP_ID || 'i5I6C6KjntYh1F14EWE7MRvL9zOhSNiUBIZEAez4',
+  masterKey: process.env.MASTER_KEY || '1IVPtuNWfywuer1F80BQYIM5t9uDoEOgt6qGENEF', //Add your master key here. Keep it secret!
+  fileKey: '41040b26-388f-4741-97bb-330bd549a25d',
+  clientKey: 'Srf2kfMCIn4b64j5ObjchlHb6Ywt0r9IXMHZu7iV',
   serverURL: process.env.SERVER_URL || 'http://localhost:1337'  // Don't forget to change to https if needed
 });
 // Client-keys like the javascript key or the .NET key are not necessary with parse-server
